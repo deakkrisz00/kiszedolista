@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>Utánpótlás Kezelő</title>
+<meta name="description" content="Napi áru-utánpótlás kezelő szuvenírboltok számára">
+<meta name="theme-color" content="#2f6fed">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Utánpótlás">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <h1 class="app-title">Utánpótlás</h1>
+    <button type="button" class="icon-btn" id="topbar-settings" aria-label="Beállítások">⚙️</button>
+  </header>
+
+  <main id="views">
+    <section id="view-dashboard" class="view"></section>
+    <section id="view-hianylista" class="view hidden"></section>
+    <section id="view-kiszedes" class="view hidden"></section>
+    <section id="view-elozmenyek" class="view hidden"></section>
+    <section id="view-statisztikak" class="view hidden"></section>
+    <section id="view-termekek" class="view hidden"></section>
+    <section id="view-beallitasok" class="view hidden"></section>
+  </main>
+
+  <nav class="bottom-nav">
+    <button type="button" class="nav-item" data-view="dashboard">
+      <span class="nav-icon">🏠</span><span class="nav-label">Főoldal</span>
+    </button>
+    <button type="button" class="nav-item" data-view="hianylista">
+      <span class="nav-icon">📋<span id="nav-badge-hianylista" class="nav-badge hidden"></span></span>
+      <span class="nav-label">Hiánylista</span>
+    </button>
+    <button type="button" class="nav-item" data-view="kiszedes">
+      <span class="nav-icon">📦</span><span class="nav-label">Kiszedés</span>
+    </button>
+    <button type="button" class="nav-item" data-view="termekek">
+      <span class="nav-icon">🏷️</span><span class="nav-label">Termékek</span>
+    </button>
+    <button type="button" class="nav-item" data-view="statisztikak">
+      <span class="nav-icon">📊</span><span class="nav-label">Statisztika</span>
+    </button>
+  </nav>
+
+  <div id="modal-root"></div>
+  <div id="toast-root"></div>
+</div>
+
+<script src="db.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
